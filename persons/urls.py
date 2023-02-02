@@ -3,7 +3,7 @@ from .api import PersonViewSet, UserViewSet
 
 router = routers.DefaultRouter()
 
-router.register('api/persons',PersonViewSet,'persons')
-router.register('api/users',UserViewSet,'users')
+router.register('persons/api',PersonViewSet,'persons')
+router.register('users/api',UserViewSet,'users')
 
 urlpatterns = router.urls

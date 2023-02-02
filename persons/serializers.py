@@ -10,4 +10,4 @@ class PersonSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Person
 		fields = ('id','first_name','last_name','date_birth','dni')
-		only_read_fields = ('created_at')
+		read_only_fields = ('created_at',)
