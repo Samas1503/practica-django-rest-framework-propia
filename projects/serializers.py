@@ -5,11 +5,11 @@ from persons.models import Person, User
 class ProjectSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Project
-		fields = ('id','name','description','tecnology')
-		read_only_fields = ('created_at','created_by')
+		fields = ('id','name','description','tecnology','created_by')
+		read_only_fields = ('created_at',)
 
 class TaskSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Task
-		fields  = ('id','title', 'description','important')
-		read_only_fields = ('created_at','created_by','from_project')
+		fields  = ('id','title', 'description','important','from_project','created_by')
+		read_only_fields = ('created_at',)
